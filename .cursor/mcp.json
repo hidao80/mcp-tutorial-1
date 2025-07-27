@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+        "sqlite": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${user_config.database_path}"
+            ],
+            "env": {
+                "UV_CACHE_DIR": "${__dirname}/.uv-cache"
+            }
+        }
+    }
+}

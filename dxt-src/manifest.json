@@ -1,0 +1,49 @@
+{
+    "dxt_version": "0.1",
+    "name": "sqlite-mcp-server",
+    "display_name": "SQLite MCP Server",
+    "version": "1.0.0",
+    "description": "MCP server for SQLite database operations using uvx mcp-server-sqlite",
+    "author": {
+        "name": "hidao80"
+    },
+    "license": "MIT",
+    "icon": "icon.png",
+    "homepage": "https://github.com/hidao80/sqlite-mcp-dxt",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hidao80/sqlite-mcp-dxt.git"
+    },
+    "keywords": [
+        "sqlite",
+        "database",
+        "mcp",
+        "sql",
+        "desktop-extension"
+    ],
+    "server": {
+        "type": "python",
+        "entry_point": "index.js",
+        "mcp_config": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${user_config.database_path}"
+            ],
+            "env": {
+                "PYTHONPATH": "${__dirname}",
+                "UV_CACHE_DIR": "${__dirname}/.uv-cache"
+            }
+        }
+    },
+    "user_config": {
+        "database_path": {
+            "type": "file",
+            "title": "SQLite Database File",
+            "description": "Select your SQLite database file (.db, .sqlite, .sqlite3)",
+            "default": "${HOME}/Documents/database.db",
+            "required": true
+        }
+    }
+}

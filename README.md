@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/hidao80-mcp-tutorial-1-badge.png)](https://mseep.ai/app/hidao80-mcp-tutorial-1)
+
 # SQLite MCP Server Tutorial (1)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

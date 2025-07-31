@@ -1,12 +1,10 @@
 {
-    "name": "sqlite-mcp-dxt",
+    "name": "sqlite",
     "version": "1.0.0",
     "description": "SQLite MCP Server Desktop Extension using uvx mcp-server-sqlite",
-    "main": "index.js",
-    "type": "module",
     "scripts": {
-        "package": "npx @anthropic-ai/dxt pack && (mkdir -p ../dist 2>/dev/null || mkdir ..\\dist 2>nul || echo) && (mv *.dxt ../dist/sqlite-mcp-server.dxt 2>/dev/null || move *.dxt ..\\dist\\sqlite-mcp-server.dxt 2>nul || echo 'Please manually move the .dxt file')",
-        "package-ps": "npx @anthropic-ai/dxt pack && powershell -Command \"if (!(Test-Path '../dist')) { New-Item -ItemType Directory -Path '../dist' -Force }; Get-ChildItem -Name '*.dxt' | ForEach-Object { Move-Item $_ '../dist/sqlite-mcp-server.dxt' }\""
+        "package": "npx @anthropic-ai/dxt pack && (mkdir -p ../dist 2>/dev/null || mkdir ..\\dist 2>nul || echo) && (mv *.dxt ../dist/sqlite.dxt 2>/dev/null || move *.dxt ..\\dist\\sqlite.dxt 2>nul || echo 'Please manually move the .dxt file')",
+        "package-ps": "npx @anthropic-ai/dxt pack && powershell -Command \"if (!(Test-Path '../dist')) { New-Item -ItemType Directory -Path '../dist' -Force }; Get-ChildItem -Name '*.dxt' | ForEach-Object { Move-Item $_ '../dist/sqlite.dxt' }\""
     },
     "devDependencies": {
         "@anthropic-ai/dxt": "^0.1.0"

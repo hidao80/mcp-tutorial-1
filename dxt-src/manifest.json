@@ -1,6 +1,6 @@
 {
     "dxt_version": "0.1",
-    "name": "sqlite-mcp-server",
+    "name": "sqlite",
     "display_name": "SQLite MCP Server",
     "version": "1.0.0",
     "description": "MCP server for SQLite database operations using uvx mcp-server-sqlite",
@@ -23,17 +23,17 @@
     ],
     "server": {
         "type": "python",
-        "entry_point": "index.js",
+        "entry_point": "uvx",
         "mcp_config": {
             "command": "uvx",
             "args": [
                 "mcp-server-sqlite",
                 "--db-path",
                 "${user_config.database_path}"
-            ],
+            ],            
             "env": {
                 "PYTHONPATH": "${__dirname}",
-                "UV_CACHE_DIR": "${__dirname}/.uv-cache"
+                "port": "${user_config.port}"
             }
         }
     },
@@ -44,6 +44,13 @@
             "description": "Select your SQLite database file (.db, .sqlite, .sqlite3)",
             "default": "${HOME}/Documents/database.db",
             "required": true
-        }
+        },
+        "port": {
+            "type": "number",
+            "title": "Server Port",
+            "description": "Port for the MCP server to listen on",
+            "default": 58901,
+            "required": true
+        }   
     }
 }

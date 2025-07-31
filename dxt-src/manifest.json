@@ -2,7 +2,7 @@
     "dxt_version": "0.1",
     "name": "sqlite",
     "display_name": "SQLite MCP Server",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "MCP server for SQLite database operations using uvx mcp-server-sqlite",
     "author": {
         "name": "hidao80"

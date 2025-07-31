@@ -137,7 +137,8 @@ DXTパッケージのビルドには以下が必要です：
 mcp-tutorial-1/
 ├── init_ja.sql               # 初期データベーススキーマとサンプルデータ（日本語版）
 ├── init.sql                  # 初期データベーススキーマとサンプルデータ（英語版）
-├── README.md                 # このファイル
+├── README_ja.md              # このファイル
+├── README.md                 # このファイルの英語版
 ├── database.db               # SQLiteデータベースファイル（初期化時に作成）
 ├── .gitignore                # Git除外設定
 ├── .cursor/mcp.json          # MCP設定ファイル（Cursor用）
@@ -147,14 +148,14 @@ mcp-tutorial-1/
 │   ├── DESIGN_ja.md          # 設計ドキュメント（日本語）
 │   └── DESIGN.md             # 設計ドキュメント（英語）
 ├── dxt-src/                  # Claude Desktop用DXTファイル群
+│   ├── .gitignore            # DXT除外設定
 │   ├── manifest.json         # DXTマニフェストファイル
 │   ├── icon.png              # DXTアイコン画像
-│   ├── index.js              # DXTメインエントリーポイント
 │   ├── package.json          # DXT用パッケージ設定
 │   ├── README_ja.md          # DXT固有のドキュメント（日本語）
 │   └── README.md             # DXT固有のドキュメント（英語）
 └── dist/                     # ビルド成果物（.dxtファイル）
-    └── sqlite-mcp-server.dxt # Claude Desktop用デスクトップ拡張機能
+    └── sqlite.dxt            # Claude Desktop用デスクトップ拡張機能
 ```
 
 ## ライセンス

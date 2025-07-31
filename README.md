@@ -136,6 +136,7 @@ Building the DXT package requires:
 mcp-tutorial-1/
 ├── init_ja.sql               # Initial database schema and sample data (Japanese version)
 ├── init.sql                  # Initial database schema and sample data (English version)
+├── README_ja.md              # This file (Japanese version)
 ├── README.md                 # This file
 ├── database.db               # SQLite database file (created during initialization)
 ├── .gitignore                # Git exclusion settings
@@ -146,14 +147,14 @@ mcp-tutorial-1/
 │   ├── DESIGN_ja.md          # Design document (Japanese)
 │   └── DESIGN.md             # Design document (English)
 ├── dxt-src/                  # DXT files for Claude Desktop
+│   ├── .gitignore            # DXT exclusion settings
 │   ├── manifest.json         # DXT manifest file
 │   ├── icon.png              # DXT icon image
-│   ├── index.js              # DXT main entry point
 │   ├── package.json          # Package configuration for DXT
 │   ├── README_ja.md          # DXT-specific documentation (Japanese)
 │   └── README.md             # DXT-specific documentation (English)
 └── dist/                     # Build artifacts (.dxt files)
-    └── sqlite-mcp-server.dxt # Desktop extension for Claude Desktop
+    └── sqlite.dxt            # Desktop extension for Claude Desktop
 ```
 
 ## License

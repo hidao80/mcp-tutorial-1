@@ -1,5 +1,5 @@
 {
-    "mcpServers": {
+    "servers": {
         "sqlite": {
             "command": "uvx",
             "args": [

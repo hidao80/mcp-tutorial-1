@@ -1,6 +1,8 @@
 # SQLite MCP Serverチュートリアル(1)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Lint](https://github.com/hidao80/mcp-tutorial-1/actions/workflows/lint.yml/badge.svg)](https://github.com/hidao80/mcp-tutorial-1/actions/workflows/lint.yml)
+[![Audit](https://github.com/hidao80/mcp-tutorial-1/actions/workflows/audit.yml/badge.svg)](https://github.com/hidao80/mcp-tutorial-1/actions/workflows/audit.yml)
 
 SQLiteデータベースを操作するためのModel Context Protocol (MCP) サーバーの最初のチュートリアルです。Cursorエディターやその他のMCP対応クライアントで使用できます。
 

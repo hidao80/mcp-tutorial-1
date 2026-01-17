@@ -1,0 +1,38 @@
+name: Lint
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  lint:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: dxt-src/package-lock.json
+
+      - name: Install dependencies
+        working-directory: dxt-src
+        run: npm ci || npm install
+
+      - name: Validate manifest.json
+        working-directory: dxt-src
+        run: |
+          if [ -f manifest.json ]; then
+            echo "Validating manifest.json..."
+            node -e "JSON.parse(require('fs').readFileSync('manifest.json', 'utf8'))" && echo "manifest.json is valid JSON"
+          fi
+
+      - name: Validate package.json
+        working-directory: dxt-src
+        run: |
+          echo "Validating package.json..."
+          node -e "JSON.parse(require('fs').readFileSync('package.json', 'utf8'))" && echo "package.json is valid JSON"

@@ -1,6 +1,7 @@
 # SQLite MCP Server Tutorial (1)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/hidao80/mcp-tutorial-1)
 
 This is the first tutorial for a Model Context Protocol (MCP) server for operating SQLite databases. Can be used with Cursor editor and other MCP-compatible clients.
 
